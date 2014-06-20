@@ -15,6 +15,8 @@
         * {
             margin: 0;
             padding: 0;
+            color: #186084;
+            font-family: 'Microsoft Yahei', arial;
         }
 
         #container {
@@ -28,10 +30,18 @@
             border-bottom: 2px solid #03b22f;
         }
 
-        nav{
+            /*********Navigation********/
+        nav {
             border-bottom: 2px solid #03b22f;
+            font: normal 14px arial;
         }
-        nav ul{
+
+        nav a {
+            text-decoration: none;
+            color: #186084;
+        }
+
+        nav ul {
             list-style: none;
         }
 
@@ -40,11 +50,101 @@
             line-height: 18px;;
         }
 
-        nav ul li ul li{
-            float: left;
-            margin-right:5%;
+        nav ul li a {
+            margin-right: 5%;
         }
 
+        nav ul li a:first-child {
+            margin-right: 0px;
+        }
+
+            /*******************/
+        #newarticle {
+            text-align: center;
+        }
+
+        #newarticle a {
+            display: block;
+            text-decoration: none;
+            padding: 5px 0px;
+        }
+
+        .firstnews {
+            font: bold 16px arial;
+            color: #000000;
+        }
+
+        .secondnews {
+            font: bold 14px arial;
+            color: #807e7f;
+        }
+
+        #sliderbox {
+            margin: 10px 0px;
+        }
+
+        #sliderbox div {
+            height: 160px;
+            background: url("images/slider.jpg") no-repeat center;
+            text-align: center;
+        }
+
+        /******************/
+        .news-tab {
+            border-bottom: 2px solid #03b22f;
+            margin-top: 20px;
+        }
+
+        .news-tab a {
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .p_newslist {
+            clear: both;
+            padding: 7px 12px;
+        }
+
+        .p_newslist li {
+            height: 24px;
+            line-height: 24px;
+            padding-right: 42px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .p_newslist li a:visited {
+            color: #aaa;
+        }
+
+        .p_newslist_ico {
+            position: absolute;
+            right: 0;
+            z-index: 10;
+            text-align: right;
+            top: -2px;
+        }
+
+        .p_newslist_ico_num {
+            display: inline-block;
+            height: 24px;
+            line-height: 24px;
+            overflow: hidden;
+            background-position: right -428px;
+            padding-right: 15px;
+            color: #888;
+            font-size: 10px;
+            font-style: normal;
+        }
+        /*************/
+        footer{
+            margin-top:10px;
+            text-align: center;
+            color: #000;
+        }
     </style>
 </head>
 <body>
@@ -54,48 +154,121 @@
         <nav id="navigator">
             <ul>
                 <li>
-                    <ul>
-                        <li><a href="#">概况:</a></li>
-                        <li><a href="#">简介</a></li>
-                        <li><a href="#">负责人</a></li>
-                        <li><a href="#">成员</a></li>
-                        <li><a href="#">文化</a></li>
-                    </ul>
+                    <a href="#">概况：</a>
+                    <a href="#">简介</a>
+                    <a href="#">负责人</a>
+                    <a href="#">成员</a>
+                    <a href="#">文化</a>
                 </li>
                 <li>
-                    <ul>
-                        <li><a href="#">技术：</a></li>
-                        <li><a href="#">定位</a></li>
-                        <li><a href="#">可视化</a></li>
-                        <li><a href="#">模型</a></li>
-                        <li><a href="#">服务</a></li>
-                        <li><a href="#">通信</a></li>
-                    </ul>
+
+                    <a href="#">技术：</a>
+                    <a href="#">定位</a>
+                    <a href="#">可视化</a>
+                    <a href="#">模型</a>
+                    <a href="#">服务</a>
+                    <a href="#">通信</a>
+
                 </li>
                 <li>
-                    <ul>
-                        <li><a href="#">成果：</a></li>
-                        <li><a href="#">项目</a></li>
-                        <li><a href="#">论文</a></li>
-                        <li><a href="#">获奖</a></li>
-                        <li><a href="#">专利</a></li>
-                    </ul>
+                    <a href="#">成果：</a>
+                    <a href="#">项目</a>
+                    <a href="#">论&nbsp;&nbsp;&nbsp;文</a>
+                    <a href="#">获奖</a>
+                    <a href="#">专利</a>
                 </li>
                 <li>
-                    <ul>
-                        <li><a href="#">科研：</a></li>
-                        <li><a href="#">设备</a></li>
-                        <li><a href="#">UbiEyes</a></li>
-                        <li><a href="#">案例</a></li>
-                        <li><a href="#">解决方案</a></li>
-                    </ul>
+                    <a href="#">科研：</a>
+                    <a href="#">设备</a>
+                    <a href="#">平&nbsp;&nbsp;&nbsp;台</a>
+                    <a href="#">案例</a>
+                    <a href="#">解决方案</a>
                 </li>
             </ul>
         </nav>
     </header>
     <div id="content">
+        <div id="newarticle">
+            <h2><a href="#" class="firstnews">团队同学荣获湖北省大学生创业大赛金奖</a></h2>
+
+            <h3><a href="#" class="secondnews">[2015年UbiLoc“挑战杯”项目组招贤启事]</a></h3>
+        </div>
+        <div id="sliderbox">
+            <div></div>
+        </div>
+        <!--news tab-->
+        <div class="news-tab">
+            <h3><a href="#">新闻</a></h3>
+        </div>
+        <!--news list-->
+        <div class="news-list">
+            <ul class="p_newslist">
+                <li>
+                    <a href="http://news.sina.cn/?sa=t124v71d12332792&amp;sid=211825&amp;pos=108&amp;vt=4">
+                        囧哥说事:让人“ 蛋疼”的意外
+                    </a>
+                    <em class="p_newslist_ico"><i class="p_newslist_ico_num">2580</i></em>
+                </li>
+                <li><a href="http://news.sina.cn/?sa=t124v71d12331139&amp;pos=108&amp;vt=4">官媒批个别民主生活会成话剧</a><em
+                        class="p_newslist_ico"><i class="p_newslist_ico_num">1万+</i></em></li>
+                <li><a href="http://news.sina.cn/?sa=t124v71d12329773&amp;pos=108&amp;vt=4">佛山书记:说公务员难当可辞职</a><em
+                        class="p_newslist_ico"><i class="p_newslist_ico_num">2万+</i></em></li>
+                <li><a href="http://news.sina.cn/?sa=t124v71d12331405&amp;pos=108&amp;vt=4">村民偷拍县长收礼被定黑恶势力</a><em
+                        class="p_newslist_ico"><i class="p_newslist_ico_num">7万+</i></em></li>
+                <li><a href="http://news.sina.cn/?sa=t124v71d12332411&amp;pos=108&amp;vt=4">中科院研制“钢铁侠”战衣.图</a><em
+                        class="p_newslist_ico"><i class="p_newslist_ico_num">1124</i></em></li>
+                <li><a href="http://news.sina.cn/?sa=t124v71d12329727&amp;pos=108&amp;vt=4">高校学生欲裸跑要求装空调</a><em
+                        class="p_newslist_ico"><i class="p_newslist_ico_num">9302</i></em></li>
+                <li><a href="http://mil.sina.cn/?sa=t134d421588v76&amp;pos=108&amp;vt=4">美菲将在黄岩岛附近实弹演习</a><em
+                        class="p_newslist_ico"><i class="p_newslist_ico_num">540</i></em></li>
+                <li><a href="http://news.sina.cn/?sa=d50t141v68&amp;pos=108&amp;vt=4">上海男子因熬夜看球猝死家中</a><em
+                        class="p_newslist_ico"></em></li>
+                <li><a href="http://zhuanlan.sina.cn/?pos=108&amp;vt=4">专栏:“僧尼同寺”纠结在哪里</a><em
+                        class="p_newslist_ico"></em></li>
+                <li><a href="http://video.sina.cn/?sa=t424v456d1141364&amp;pos=108&amp;vt=4">视频:澳洲富豪荒岛独居二十年</a><em
+                        class="p_newslist_ico"><i class="p_newslist_ico_num">8</i></em></li>
+                <li><a href="http://sina.cn/j/d.php?k=2&amp;pos=108&amp;vt=4">朝鲜新娘嫁东北男后悲惨一幕</a><em
+                        class="p_newslist_ico"></em></li>
+            </ul>
+        </div>
+        <!--news tab-->
+        <div class="news-tab">
+            <h3><a href="#">通知公告</a></h3>
+        </div>
+        <!--news list-->
+        <div class="notice-list">
+            <ul class="p_newslist">
+                <li>
+                    <a href="http://news.sina.cn/?sa=t124v71d12332792&amp;sid=211825&amp;pos=108&amp;vt=4">
+                        囧哥说事:让人“ 蛋疼”的意外
+                    </a>
+                    <em class="p_newslist_ico"><i class="p_newslist_ico_num">2580</i></em>
+                </li>
+                <li><a href="http://news.sina.cn/?sa=t124v71d12331139&amp;pos=108&amp;vt=4">官媒批个别民主生活会成话剧</a><em
+                        class="p_newslist_ico"><i class="p_newslist_ico_num">1万+</i></em></li>
+                <li><a href="http://news.sina.cn/?sa=t124v71d12329773&amp;pos=108&amp;vt=4">佛山书记:说公务员难当可辞职</a><em
+                        class="p_newslist_ico"><i class="p_newslist_ico_num">2万+</i></em></li>
+                <li><a href="http://news.sina.cn/?sa=t124v71d12331405&amp;pos=108&amp;vt=4">村民偷拍县长收礼被定黑恶势力</a><em
+                        class="p_newslist_ico"><i class="p_newslist_ico_num">7万+</i></em></li>
+                <li><a href="http://news.sina.cn/?sa=t124v71d12332411&amp;pos=108&amp;vt=4">中科院研制“钢铁侠”战衣.图</a><em
+                        class="p_newslist_ico"><i class="p_newslist_ico_num">1124</i></em></li>
+                <li><a href="http://news.sina.cn/?sa=t124v71d12329727&amp;pos=108&amp;vt=4">高校学生欲裸跑要求装空调</a><em
+                        class="p_newslist_ico"><i class="p_newslist_ico_num">9302</i></em></li>
+                <li><a href="http://mil.sina.cn/?sa=t134d421588v76&amp;pos=108&amp;vt=4">美菲将在黄岩岛附近实弹演习</a><em
+                        class="p_newslist_ico"><i class="p_newslist_ico_num">540</i></em></li>
+                <li><a href="http://news.sina.cn/?sa=d50t141v68&amp;pos=108&amp;vt=4">上海男子因熬夜看球猝死家中</a><em
+                        class="p_newslist_ico"></em></li>
+                <li><a href="http://zhuanlan.sina.cn/?pos=108&amp;vt=4">专栏:“僧尼同寺”纠结在哪里</a><em
+                        class="p_newslist_ico"></em></li>
+                <li><a href="http://video.sina.cn/?sa=t424v456d1141364&amp;pos=108&amp;vt=4">视频:澳洲富豪荒岛独居二十年</a><em
+                        class="p_newslist_ico"><i class="p_newslist_ico_num">8</i></em></li>
+                <li><a href="http://sina.cn/j/d.php?k=2&amp;pos=108&amp;vt=4">朝鲜新娘嫁东北男后悲惨一幕</a><em
+                        class="p_newslist_ico"></em></li>
+            </ul>
+        </div>
     </div>
     <footer>
+        Copyright Ubiloc Team 2014
     </footer>
 </div>
 </body>
